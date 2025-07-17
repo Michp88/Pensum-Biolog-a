@@ -1,50 +1,69 @@
 
 body {
   font-family: Arial, sans-serif;
-  background-color: #ffe6f0;
-  color: #333;
+  background-color: #f0f7f4;
+  color: #2d2d2d;
   text-align: center;
   margin: 0;
   padding: 20px;
 }
 
 h1 {
-  color: #cc007a;
-  margin-bottom: 30px;
+  color: #4b2e83;
+  margin-bottom: 40px;
 }
 
 .malla {
-  display: grid;
-  grid-template-columns: repeat(5, 1fr);
-  gap: 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
   max-width: 1200px;
   margin: 0 auto;
 }
 
+.ciclo {
+  border: 2px solid #b6d7a8;
+  background-color: #eaf7ec;
+  border-radius: 12px;
+  padding: 15px;
+}
+
+.ciclo h2 {
+  color: #4b2e83;
+  margin-bottom: 15px;
+}
+
+.materias {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 10px;
+}
+
 .materia {
-  background-color: #ffcce0;
-  border: 2px solid #cc007a;
-  padding: 10px;
+  background-color: #d9e4dd;
+  border: 2px solid #8e7cc3;
+  padding: 10px 15px;
   border-radius: 10px;
   cursor: pointer;
   transition: all 0.3s ease;
-  position: relative;
+  min-width: 180px;
 }
 
 .materia:hover {
-  background-color: #ffb3d9;
+  background-color: #c9d9d0;
 }
 
 .materia.aprobada {
-  background-color: #e6ffed;
-  border-color: #28a745;
+  background-color: #d0f0c0;
+  border-color: #4CAF50;
   text-decoration: line-through;
   color: #555;
 }
 
 .materia:disabled {
-  background-color: #f3f3f3;
+  background-color: #eeeeee;
   color: #aaa;
-  border-color: #ddd;
+  border-color: #ccc;
   cursor: not-allowed;
 }

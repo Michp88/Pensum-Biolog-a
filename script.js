@@ -1,4 +1,17 @@
 
+const materiasPorCiclo = {
+  "Ciclo 1": ["Matemática", "Biología General", "Física Básica", "Química General"],
+  "Ciclo 2": ["Botánica I", "Estadística General", "Geografía Física", "Zoología I"],
+  "Ciclo 3": ["Métodos de Investigación I", "Botánica II", "Zoología II", "Química Orgánica General"],
+  "Ciclo 4": ["Bioquímica", "Anatomía Comparada de Cordados", "Química Analítica Básica", "Anatomía y Morfología Vegetal"],
+  "Ciclo 5": ["Fisiología Animal", "Fisiología Vegetal", "Filosofía General", "Biología Celular y Molecular"],
+  "Ciclo 6": ["Hidrobiología General", "Genética", "Sociología General", "Inglés Técnico"],
+  "Ciclo 7": ["Ecología General", "Acuicultura General", "Historia Económica de El Salvador y Centroamérica", "Optativa 1"],
+  "Ciclo 8": ["Manejo de Recursos Naturales", "Microbiología General", "Educación Ambiental", "Evolución"],
+  "Ciclo 9": ["Formulación y Evaluación de Proyectos", "Evaluación de Impacto Ambiental", "Optativa 2", "Optativa 3"],
+  "Ciclo 10": ["Seminario de Investigación", "Métodos de Investigación II", "Optativa 4"]
+};
+
 const materias = {
   "Matemática": [],
   "Biología General": [],
@@ -55,14 +68,29 @@ const aprobadas = new Set();
 function crearMalla() {
   const contenedor = document.getElementById("malla");
 
-  for (const materia in materias) {
-    const btn = document.createElement("button");
-    btn.textContent = materia;
-    btn.className = "materia";
-    btn.disabled = materias[materia].length > 0;
-    btn.id = materia;
-    btn.onclick = () => toggleAprobada(materia);
-    contenedor.appendChild(btn);
+  for (const ciclo in materiasPorCiclo) {
+    const bloque = document.createElement("div");
+    bloque.className = "ciclo";
+
+    const titulo = document.createElement("h2");
+    titulo.textContent = ciclo;
+    bloque.appendChild(titulo);
+
+    const materiasDiv = document.createElement("div");
+    materiasDiv.className = "materias";
+
+    materiasPorCiclo[ciclo].forEach(materia => {
+      const btn = document.createElement("button");
+      btn.textContent = materia;
+      btn.className = "materia";
+      btn.disabled = materias[materia].length > 0;
+      btn.id = materia;
+      btn.onclick = () => toggleAprobada(materia);
+      materiasDiv.appendChild(btn);
+    });
+
+    bloque.appendChild(materiasDiv);
+    contenedor.appendChild(bloque);
   }
 }
 
