@@ -1,0 +1,50 @@
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: #ffe6f0;
+  color: #333;
+  text-align: center;
+  margin: 0;
+  padding: 20px;
+}
+
+h1 {
+  color: #cc007a;
+  margin-bottom: 30px;
+}
+
+.malla {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 10px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.materia {
+  background-color: #ffcce0;
+  border: 2px solid #cc007a;
+  padding: 10px;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  position: relative;
+}
+
+.materia:hover {
+  background-color: #ffb3d9;
+}
+
+.materia.aprobada {
+  background-color: #e6ffed;
+  border-color: #28a745;
+  text-decoration: line-through;
+  color: #555;
+}
+
+.materia:disabled {
+  background-color: #f3f3f3;
+  color: #aaa;
+  border-color: #ddd;
+  cursor: not-allowed;
+}
