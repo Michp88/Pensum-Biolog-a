@@ -1,4 +1,3 @@
-
 const materiasPorCiclo = {
   "Ciclo 1": ["Matemática", "Biología General", "Física Básica", "Química General"],
   "Ciclo 2": ["Botánica I", "Estadística General", "Geografía Física", "Zoología I"],
