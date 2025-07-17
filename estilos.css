@@ -1,69 +1,69 @@
 
-body {
-  font-family: Arial, sans-serif;
-  background-color: #f0f7f4;
+cuerpo {
+  familia de fuentes: Aptos Narrow, sans-serif;
+  color de fondo: #f0f7f4;
   color: #2d2d2d;
-  text-align: center;
-  margin: 0;
-  padding: 20px;
+  alinear texto: centro;
+  margen: 0;
+  relleno: 20px;
 }
 
 h1 {
   color: #4b2e83;
-  margin-bottom: 40px;
+  margen inferior: 40px;
 }
 
 .malla {
-  display: flex;
-  flex-direction: column;
-  gap: 30px;
-  max-width: 1200px;
-  margin: 0 auto;
+  pantalla: flex;
+  flexión-dirección: columna;
+  espacio: 30px;
+  ancho máximo: 1200px;
+  margen: 0 auto;
 }
 
 .ciclo {
-  border: 2px solid #b6d7a8;
-  background-color: #eaf7ec;
-  border-radius: 12px;
-  padding: 15px;
+  borde: 2px sólido #b6d7a8;
+  color de fondo: #eaf7ec;
+  radio del borde: 12px;
+  relleno: 15px;
 }
 
 .ciclo h2 {
   color: #4b2e83;
-  margin-bottom: 15px;
+  margen inferior: 15px;
 }
 
 .materias {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 10px;
+  pantalla: flex;
+  flex-wrap: envolver;
+  justificar-contenido: centro;
+  espacio: 10px;
 }
 
 .materia {
-  background-color: #d9e4dd;
-  border: 2px solid #8e7cc3;
-  padding: 10px 15px;
-  border-radius: 10px;
-  cursor: pointer;
-  transition: all 0.3s ease;
-  min-width: 180px;
+  color de fondo: #d9e4dd;
+  borde: 2px sólido #8e7cc3;
+  relleno: 10px 15px;
+  radio del borde: 10px;
+  cursor: puntero;
+  transición: todos los 0,3 s de facilidad;
+  ancho mínimo: 180px;
 }
 
 .materia:hover {
-  background-color: #c9d9d0;
+  color de fondo: #c9d9d0;
 }
 
 .materia.aprobada {
-  background-color: #d0f0c0;
-  border-color: #4CAF50;
-  text-decoration: line-through;
+  color de fondo: #d0f0c0;
+  color del borde: #4CAF50;
+  decoración de texto: línea a través;
   color: #555;
 }
 
-.materia:disabled {
-  background-color: #eeeeee;
+.materia:deshabilitado {
+  color de fondo: #eeeeee;
   color: #aaa;
-  border-color: #ccc;
-  cursor: not-allowed;
+  color del borde: #ccc;
+  cursor: no permitido;
 }
